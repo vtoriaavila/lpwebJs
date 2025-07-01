@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Empréstimo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Simulador de Empréstimo</h1>
+
+  <form id="form-emprestimo">
+    <label for="valor">Valor do Empréstimo (R$):</label><br>
+    <input type="number" id="valor" required><br><br>
+
+    <label for="parcelas">Quantidade de Parcelas (1 a 36):</label><br>
+    <input type="number" id="parcelas" min="1" max="36" required><br><br>
+
+    <label for="juros">Taxa de Juros Mensal (%):</label><br>
+    <input type="number" id="juros" step="0.01" required><br><br>
+
+    <button type="button" onclick="simularEmprestimo()">Simular</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

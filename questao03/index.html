@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lanchonete do IFMA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Lanchonete do IFMA</h2>
+    <form id="pedidoForm">
+      <label for="nome">Nome do Cliente:</label>
+      <input type="text" id="nome" required>
+
+      <fieldset>
+        <legend>Bebidas:</legend>
+        <label><input type="radio" name="bebida" value="Suco"> Suco</label>
+        <label><input type="radio" name="bebida" value="Refrigerante"> Refrigerante</label>
+        <label><input type="radio" name="bebida" value="Água"> Água</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Doces e Salgados:</legend>
+        <label><input type="checkbox" name="alimentos" value="Bolo"> Bolo</label>
+        <label><input type="checkbox" name="alimentos" value="Pastel"> Pastel</label>
+        <label><input type="checkbox" name="alimentos" value="Torta"> Torta</label>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="button" onclick="calcularPedido()">Calcular</button>
+        <button type="reset">Limpar</button>
+      </div>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
